@@ -1,0 +1,43 @@
+@import "./base.css";
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@200&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  font-family: 'Archivo', sans-serif;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(360, 100%, 100%, 1);
+  transition: 0.4s;
+}
+
+body{
+  background-color: white;
+}
+
+@media (hover: hover) {
+  a:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 0 2rem;
+  }
+}
