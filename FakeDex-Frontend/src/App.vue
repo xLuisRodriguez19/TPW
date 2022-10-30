@@ -3,14 +3,6 @@
 </template>
 
 <style>
-*{
-    box-sizing: border-box;;
-}
-
-body{
-  background-color: white;
-}
-
 nav a.router-link-exact-active:hover {
   color: transparent;
 }

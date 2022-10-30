@@ -1,5 +1,5 @@
 <template>
-    <div class="fixed left-0 top-24 ">
+    <div class="flex">
         <div class="h-96 w-screen flex flex-row flex-nowrap bg-truck rounded-2xl">
             <Inputs/>
         </div>

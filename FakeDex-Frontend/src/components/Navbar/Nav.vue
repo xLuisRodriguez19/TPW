@@ -1,44 +1,21 @@
 <template>
-  <div class="fixed top-0 left-0 w-screen bg-purple-900">
-    <header class="flex flex-col flex-nowrap">
-      <div class="flex h-20 items-center">
-		
-        <div class="basis-1/6 m-5">
-          <a href="#">
-            <FakeIcon :width="150" :height="50" />
-          </a>
-        </div>
+  <div class="z-0">
+    <div class="p-5 bg-purple-900 grid grid-cols-3 gap-2">
 
-        <nav class="basis-1/2 flex items-center">
-          <a href="#" class="flex tracking-widest uppercase text-base px-8"
-            >
-			<TrackIcon :height="20" :width="20" />Rastrear</a
-          >
-          <a href="#" class="flex tracking-widest uppercase text-base px-8"
-            >
-			<PackageIcon :height="20" :width="20" />Envíos</a
-          >
-          <a href="#" class="flex tracking-widest uppercase text-base px-8"
-            >
-			<LocationIcon :height="20" :width="20" />Sucursales</a
-          >
-          <a href="#" class="flex tracking-widest uppercase text-base px-8"
-            >
-			<ContactIcon :height="20" :width="20" />Contacto</a
-          >
-          <a href="#" class="flex tracking-widest uppercase text-base px-8">Admin</a>
-        </nav>
+      <FakeIcon @click="goHome" class="flex-none w-20 h-7 cursor-pointer"/>
 
-        <div class="basis-1/4 m-5 flex items-center justify-end">
-          <div class="basis-1/2 flex">
-            <a href="#" class="text-xs">Registratse/Iniciar Sesión</a>
-          </div>
-          <div class="basis-1/6 flex">
-            <a href="#"><UserIcon :height="40" :width="40" /></a>
-          </div>
-        </div>
+      <div class="flex flex-row flex-nowrap nav-center-container justify-self-center space-x-5 items-center">
+        <router-link to="/rastreo" class="flex flex-row flex-nowrap  space-x-5"><TrackIcon/>Rastreo</router-link>
+        <router-link to="/envios" class="flex flex-row flex-nowrap  space-x-5"><PackageIcon/>Envíos</router-link>
+        <a href="" class="flex flex-row flex-nowrap"><LocationIcon/>Sucursales</a>
+        <router-link to="/contact" class="flex flex-row flex-nowrap  space-x-5"><ContactIcon/>Contacto</router-link>
       </div>
-    </header>
+
+      <div class="flex flex-row flex-nowrap justify-self-end space-x-5 items-center">
+        <router-link to="/login" class="text-xs text-white">Registro/Inicio Sesión</router-link>
+        <a href="" class="text-white"><UserIcon :width="30" :height="30"/></a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -49,6 +26,8 @@ import ContactIcon from "@/components/icons/Contact.vue";
 import LocationIcon from "@/components/icons/Location.vue";
 import PackageIcon from "@/components/icons/Package.vue";
 import TrackIcon from "@/components/icons/Track.vue";
+import { useRouter } from 'vue-router';
+
 export default {
   name: "NavBar",
   components: {
@@ -59,5 +38,26 @@ export default {
     PackageIcon,
     TrackIcon,
   },
+  setup() {
+    const router = useRouter();
+
+    function goHome() {
+      router.push({ name: 'Landing' });
+    }
+
+    return {
+      goHome
+    }
+  }
 };
 </script>
+<style>
+.nav-center-container{
+  @apply text-center text-base text-white cursor-default h-fit w-fit;
+}
+
+.nav-center-container a{
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+</style>
