@@ -18,4 +18,9 @@ public class FakeDexApplication {
 		SpringApplication.run(FakeDexApplication.class, args);
 	}
 
+	@RequestMapping("/hola")
+	public String hola() {
+		return "Hello Putito";
+	}
+
 }
