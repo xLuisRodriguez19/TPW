@@ -7,13 +7,13 @@
       <div class="flex flex-row flex-nowrap nav-center-container justify-self-center space-x-5 items-center">
         <router-link to="/rastreo" class="flex flex-row flex-nowrap  space-x-5"><TrackIcon/>Rastreo</router-link>
         <router-link to="/envios" class="flex flex-row flex-nowrap  space-x-5"><PackageIcon/>Envíos</router-link>
-        <a href="" class="flex flex-row flex-nowrap"><LocationIcon/>Sucursales</a>
+        <router-link to="/sucursales" class="flex flex-row flex-nowrap  space-x-5"><LocationIcon/>Sucursales</router-link>
         <router-link to="/contact" class="flex flex-row flex-nowrap  space-x-5"><ContactIcon/>Contacto</router-link>
       </div>
 
       <div class="flex flex-row flex-nowrap justify-self-end space-x-5 items-center">
         <router-link to="/login" class="text-xs text-white">Registro/Inicio Sesión</router-link>
-        <a href="" class="text-white"><UserIcon :width="30" :height="30"/></a>
+        <router-link to="/user" class="text-white"><UserIcon :width="30" :height="30"/></router-link>
       </div>
     </div>
   </div>
