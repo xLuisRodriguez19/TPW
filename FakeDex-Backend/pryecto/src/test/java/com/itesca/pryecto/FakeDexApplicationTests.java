@@ -1,4 +1,4 @@
-package com.itesca.demo;
+package com.itesca.pryecto;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
