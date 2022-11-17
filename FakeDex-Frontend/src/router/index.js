@@ -14,7 +14,9 @@ const router = createRouter({
       {
         path: '/envios',
         name: "Envios",
-        component: () => import('../views/Envios/Envios.vue')
+        component: () => import('../views/Envios/Envios.vue'),
+        children: [
+        ]
       },
       {
         path: '/rastreo',
@@ -40,6 +42,16 @@ const router = createRouter({
         path: '/user',
         name: "Profile",
         component: () => import('../views/Perfil/Perfil.vue')
+      },
+      {
+        path: '/admin',
+        name: "Admin",
+        component: () => import('../views/Admin/UpdateTracking.vue')
+      },
+      {
+        path: '/result',
+        name: 'Result',
+        component: () => import('../views/Envios/components/Result.vue')
       }
     ]
     }

@@ -1,0 +1,86 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 62">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 62" id="37806">
+      <g id="DHL_Preset-NL-MovingBox_Icons">
+        <linearGradient
+          id="DHL_Preset-NL-MovingBox_SVGID_1_"
+          gradientUnits="userSpaceOnUse"
+          x1="21.989"
+          y1="2727.55"
+          x2="26.174"
+          y2="2719.336"
+          gradientTransform="translate(0 -2671.957)"
+        >
+          <stop offset=".269" stop-color="#1d1d1b" stop-opacity="0"></stop>
+          <stop offset=".511" stop-color="#181816" stop-opacity=".364"></stop>
+          <stop offset=".817" stop-color="#080807" stop-opacity=".825"></stop>
+          <stop offset=".933"></stop>
+        </linearGradient>
+        <path
+          opacity=".5"
+          fill="url(#DHL_Preset-NL-MovingBox_SVGID_1_)"
+          d="M28.7 58.7L43.2 56 19.3 44.3 5 46.9z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_33_"
+          fill="#fdde84"
+          d="M43.2 24.8L85 17.4 61.2 5.8l-41.9 7.4z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_32_"
+          class="st5"
+          d="M32.9 19.9l41.8-7.4-3.9-2-41.9 7.4z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_31_"
+          fill="#c39000"
+          d="M43.2 24.8V56L19.3 44.3V13.2z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_30_"
+          class="st5"
+          d="M33 19.9v7.9l-4-1.9v-8z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_29_"
+          fill="#fcce09"
+          d="M43.2 24.8V56L85 48.6V17.4z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_28_"
+          fill="#fff"
+          d="M55.4 34.2v14l24.5-4.4V29.9z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_27_"
+          d="M69.6 43c1.4-.2 2.8-.5 4.3-.7V34c-1.4.2-2.8.5-4.3.7V43z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_26_"
+          d="M57.7 45c1.3-.2 2.5-.5 3.6-.6v-8.3c-1.3.2-2.5.5-3.6.6V45z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_25_"
+          d="M65.3 43.7l1.8-.3v-8.3l-1.8.3v8.3z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_24_"
+          d="M77.5 33.3c-.6.1-1.2.2-1.9.3v8.3c.6-.1 1.2-.2 1.9-.3v-8.3z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-MovingBox_Shape_23_"
+          d="M63.3 44.1c.2 0 .5-.1.7-.1v-8.3c-.2 0-.5.1-.7.1v8.3z"
+        ></path>
+      </g>
+    </symbol>
+    <use xlink:href="#37806"></use>
+  </svg>
+</template>
+
+<style>
+#DHL_Preset-NL-MovingBox .st5 {
+  opacity: 0.4;
+  fill: #aa7b33;
+  enable-background: new;
+}
+</style>

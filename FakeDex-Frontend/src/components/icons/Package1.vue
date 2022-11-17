@@ -1,0 +1,94 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 38">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 38" id="56009">
+      <g id="DHL_Preset-NL-Books_Icons">
+        <linearGradient
+          id="DHL_Preset-NL-Books_SVGID_1_"
+          gradientUnits="userSpaceOnUse"
+          x1="20.747"
+          y1="2704.33"
+          x2="25.098"
+          y2="2695.791"
+          gradientTransform="translate(0 -2671.957)"
+        >
+          <stop offset=".269" stop-color="#1d1d1b" stop-opacity="0"></stop>
+          <stop offset=".511" stop-color="#181816" stop-opacity=".364"></stop>
+          <stop offset=".817" stop-color="#080807" stop-opacity=".825"></stop>
+          <stop offset=".933"></stop>
+        </linearGradient>
+        <path
+          opacity=".5"
+          fill="url(#DHL_Preset-NL-Books_SVGID_1_)"
+          d="M25.6 34.7l15.3-2.9-20.7-10.2L5 24.3z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_111_"
+          fill="#fdde84"
+          d="M40.9 22l44-7.9-20.6-9.2-44.1 7.8z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_110_"
+          class="st5"
+          d="M32.5 18.2l44-7.9-4.5-2-43.7 8z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_92_"
+          fill="#c39000"
+          d="M40.9 22v9.8L20.2 21.6v-8.9z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_91_"
+          class="st5"
+          d="M32.5 18.2v8.1l-4.2-2.1v-7.9z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_90_"
+          fill="#fcce09"
+          d="M41 22v9.8L85 24v-9.9z"
+        ></path>
+        <path
+          id="DHL_Preset-NL-Books_Shape_89_"
+          fill="#fff"
+          d="M69.2 20v5.3l14-2.6v-5.2z"
+        ></path>
+        <g>
+          <path
+            id="DHL_Preset-NL-Books_Shape_88_"
+            d="M70.3 21.4v2.2l2.6-.5v-2.2z"
+          ></path>
+          <path
+            id="DHL_Preset-NL-Books_Shape_76_"
+            d="M73.6 21.4v1.7l.8-.2v-1.6z"
+          ></path>
+          <path
+            id="DHL_Preset-NL-Books_Shape_75_"
+            d="M76 22.7v-2.2l-1 .2v2.2"
+          ></path>
+          <g>
+            <path
+              id="DHL_Preset-NL-Books_Shape_74_"
+              d="M76.8 20.3v2.2l2.7-.5v-2.2z"
+            ></path>
+            <path
+              id="DHL_Preset-NL-Books_Shape_67_"
+              d="M80.1 20.3V22l.8-.2v-1.6z"
+            ></path>
+            <path
+              id="DHL_Preset-NL-Books_Shape_66_"
+              d="M82.5 21.6l.1-2.2-1 .2-.1 2.2"
+            ></path>
+          </g>
+        </g>
+      </g>
+    </symbol>
+    <use xlink:href="#56009"></use>
+  </svg>
+</template>
+
+<style>
+        #DHL_Preset-NL-Books .st5 {
+          opacity: 0.4;
+          fill: #aa7b33;
+          enable-background: new;
+        }
+      </style>

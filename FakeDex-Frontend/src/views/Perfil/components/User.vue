@@ -12,8 +12,7 @@
 
       <div class="mt-8">
         <h2 class="text-black font-bold text-2xl tracking-wide">
-          Luis <br />
-          Rodriguez
+          {{user}}
         </h2>
       </div>
       <p class="text-purple-400 font-semibold mt-2.5">Correo</p>
@@ -22,12 +21,20 @@
 
 <script>
 import Icon from '@/components/icons/User.vue';
-
+import { useStore } from 'vuex';
 export default {
     name: 'UserA',
     components: {
         Icon
+    },
+    setup() {
+    const store = useStore();
+    const user = store.state.user.id;
+
+    return{
+      user
     }
+  }
 
 }
 </script>

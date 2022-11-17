@@ -1,0 +1,23 @@
+<template>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 47">
+    <symbol xmlns="http://www.w3.org/2000/svg" viewBox="0 0 31 47" id="55226">
+      <path fill="#c39000" d="M3.2 0h24.6L31 7H0l3.2-7z"></path>
+      <path fill="#fff" d="M1.3 2.2h28.4v40H1.3z"></path>
+      <path
+        d="M29.4 2.4v39.5H1.6V2.4h27.8m.5-.5H1.1v40.5H30l-.1-40.5z"
+        fill="#e6e6e6"
+      ></path>
+      <path
+        d="M3.1 5.1h1.8v.5H3.1zM3.1 7.1h.7v.5h-.7zM5.7 5.1h4.2v.5H5.7zM4 7.1h5.9v.5H4zM3.1 6.1h2.5v.5H3.1zM5.7 6.1h1.6v.5H5.7zM7.5 6.1h2.4v.5H7.5z"
+      ></path>
+      <path fill="#fcce09" d="M0 7h31v40H0z"></path>
+      <path
+        fill="#aa7b33"
+        opacity=".4"
+        style="isolation: isolate"
+        d="M3.2 41.7h24.6L31 47H0l3.2-5.3z"
+      ></path>
+    </symbol>
+    <use xlink:href="#55226"></use>
+  </svg>
+</template>
