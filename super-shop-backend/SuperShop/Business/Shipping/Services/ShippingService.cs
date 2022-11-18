@@ -1,15 +1,19 @@
 ﻿using SuperShop.Models.Data;
 using Microsoft.EntityFrameworkCore;
+using SuperShop.Business.Tracking.Services;
 
 namespace SuperShop.Business.Shipping.Services
 {
     public class ShippingService
     {
         private readonly FakeDexContext _fakeDexContext;
+        private readonly EmailService _emailService;
 
-        public ShippingService(FakeDexContext fakeDexContext)
+        public ShippingService(FakeDexContext fakeDexContext, EmailService emailService)
         {
             _fakeDexContext = fakeDexContext;
+            _emailService = emailService;
+
         }
 
         public async Task<long> AddShipping(ShippingRequestDto shippingRequestDto)
@@ -30,6 +34,7 @@ namespace SuperShop.Business.Shipping.Services
             };
             await _fakeDexContext.Shipping.AddAsync(shipping);
             await _fakeDexContext.SaveChangesAsync();
+            await _emailService.SendEmail(shipping.IdUser, "Espera de ser Recolectado", 0);
             return shipping.Id;
         }
 
@@ -60,6 +65,17 @@ namespace SuperShop.Business.Shipping.Services
         {
             Console.WriteLine($"Bill total:\t{id}");
             return await _fakeDexContext.Shipping.Where(s => s.IdUser == id).OrderByDescending(t => t.Id).ToListAsync();
+        }
+
+        public async Task<List<Charts>> GetHistory()
+        {
+            return await _fakeDexContext.Shipping.Where(l => l.Fecha >= DateTime.UtcNow.AddDays(-10)).GroupBy(s  => new
+            {
+                s.Fecha.Date
+            }).Select(s => new Charts{
+                Fecha = s.Key.Date,
+                shippings = s.Select(l => l.Id).Count()
+            }).ToListAsync();
         }
     }
 }

@@ -49,8 +49,14 @@ namespace SuperShop.Business.Shipping
         [Route("api/[controller]/user/{user}")]
         public async Task<IActionResult> GetShippingByUser([FromRoute] string user)
         {
-            Console.WriteLine($"Bill total:\t{user}");
             return Ok(await _shippingService.GetShippingByUser(user));
+        }
+
+        [HttpGet]
+        [Route("api/[controller]/charts")]
+        public async Task<IActionResult> GetShippingCharts()
+        {
+            return Ok(await _shippingService.GetHistory());
         }
     }
 }

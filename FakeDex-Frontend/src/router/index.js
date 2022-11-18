@@ -52,6 +52,11 @@ const router = createRouter({
         path: '/result',
         name: 'Result',
         component: () => import('../views/Envios/components/Result.vue')
+      },
+      {
+        path: '/stats',
+        name: 'Estadisticas',
+        component: () => import('../views/Admin/Charts.vue')
       }
     ]
     }

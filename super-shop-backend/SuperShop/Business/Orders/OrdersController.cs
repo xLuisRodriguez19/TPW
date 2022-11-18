@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using SuperShop.Business.Orders.AddOrder;
-using SuperShop.Business.Orders.GetOrder;
 namespace SuperShop.Business.Orders
 {
 
@@ -11,14 +10,10 @@ namespace SuperShop.Business.Orders
 
         private readonly ILogger<OrdersController> _logger;
         private readonly AddOrderService _addOrderService;
-        private readonly GetOrderService _getOrderService;
-
-        public OrdersController(ILogger<OrdersController> logger, AddOrderService addOrderService, GetOrderService getOrderService
-            )
+        public OrdersController(ILogger<OrdersController> logger, AddOrderService addOrderService)
         {
             _logger = logger;
             _addOrderService = addOrderService;
-            _getOrderService = getOrderService;
         }
 
         //    [HttpGet]

@@ -10,6 +10,7 @@
         <router-link to="/sucursales" class="flex flex-row flex-nowrap  space-x-5" v-if="!isAdmin"><LocationIcon/>Sucursales</router-link>
         <router-link to="/contact" class="flex flex-row flex-nowrap  space-x-5" v-if="!isAdmin"><ContactIcon/>Contacto</router-link>
         <router-link to="/admin" class="flex flex-row flex-nowrap  space-x-5" v-if="isAdmin"><ContactIcon/>Admin</router-link>
+        <router-link to="/stats" class="flex flex-row flex-nowrap  space-x-5" v-if="isAdmin"><ContactIcon/>Estádisticas</router-link>
       </div>
       <div class="flex flex-row flex-nowrap justify-self-end space-x-5 items-center">
         <router-link to="/login" class="text-xs text-white" v-if="!isLogin">Registro/Inicio Sesión </router-link>

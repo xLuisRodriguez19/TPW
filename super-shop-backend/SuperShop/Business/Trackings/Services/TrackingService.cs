@@ -6,10 +6,12 @@ namespace SuperShop.Business.Tracking.Services
     public class TrackingService
     {
         private readonly FakeDexContext _fakeDexContext;
+        private readonly EmailService _emailService;
 
-        public TrackingService(FakeDexContext fakeDexContext)
+        public TrackingService(FakeDexContext fakeDexContext, EmailService emailService)
         {
             _fakeDexContext = fakeDexContext;
+            _emailService = emailService;   
         }
 
         public async Task<long> StartTracking(TrackingRequestDto trackingRequestDto)
@@ -30,7 +32,7 @@ namespace SuperShop.Business.Tracking.Services
             shipping.Status =((int)trackingRequestDto.Status);
             _fakeDexContext.Shipping.Update(shipping);
             await _fakeDexContext.SaveChangesAsync();
-
+            //await _emailService.SendEmail(shipping.IdUser, tracking.Location, trackingRequestDto.Status);
             return tracking.Id;
         }
         public async Task<List<Models.Data.Tracking>> GetTrackingById(long id)

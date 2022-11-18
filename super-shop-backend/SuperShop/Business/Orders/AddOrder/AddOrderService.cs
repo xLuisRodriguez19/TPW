@@ -9,11 +9,13 @@ namespace SuperShop.Business.Orders.AddOrder
     {
         private readonly FakeDexContext _coreContex;
         private readonly ShippingService _shippingService;
+        private readonly EmailService _emailService;
 
-        public AddOrderService(FakeDexContext coreContex, ShippingService shippingService)
+        public AddOrderService(FakeDexContext coreContex, ShippingService shippingService, EmailService emailService)
         {
             _coreContex = coreContex;
             _shippingService = shippingService;
+            _emailService = emailService;
         }
 
         public async Task<long> AddOrder(AddOrderRequestDto addOrderRequest)
@@ -39,7 +41,7 @@ namespace SuperShop.Business.Orders.AddOrder
             await _coreContex.Tracking.AddAsync(order);
             await _shippingService.updateStatus(shi.Id, addOrderRequest.status);
             await _coreContex.SaveChangesAsync();
-
+            await _emailService.SendEmail(shi.IdUser, order.Location, addOrderRequest.status);
             return order.Id;
         }
     }

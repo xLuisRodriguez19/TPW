@@ -1,6 +1,5 @@
 ﻿using SuperShop.Authentication.Jwt;
 using SuperShop.Business.Orders.AddOrder;
-using SuperShop.Business.Orders.GetOrder;
 using SuperShop.Business.Login.Services;
 using SuperShop.Business.Shipping.Services;
 using SuperShop.ServiceCollectionExtensions.ConfigurationExtensions;
@@ -36,8 +35,7 @@ public class Startup
         services.AddTransient<ShippingService>();
         services.AddTransient<TrackingService>();
         services.AddTransient<SuggestionsService>();
-
-        services.AddTransient<GetOrderService>();
+        services.AddTransient<EmailService>();
         services.AddTransient<AddOrderService>();
         
         services.AddHttpContextManager();
